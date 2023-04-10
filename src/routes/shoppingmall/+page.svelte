@@ -2,6 +2,6 @@
 
 </script>
 
-<div>
+<section>
     hmm..
-</div>
+</section>

@@ -1,0 +1,48 @@
+.shopping-mall {
+  .sm-header {
+    padding: 20px 260px;
+    border-bottom: 1px solid #909090;
+
+    .title {
+      font-size: var(--font-18);
+      font-weight: var(--font-semibold);
+    }
+
+    .sm-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-top: 20px;
+      font-size: var(--font-14);
+      font-weight: var(--font-regular);
+
+      .dropdown-toggle {
+        margin-right: 30px;
+      }
+
+      .dropdown-list {
+        width: 100px;
+
+        .dropdown {
+          display: none;
+          padding-top: 20px;
+          font-size: var(--font-12);
+
+          li:not(:first-child) {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .dropdown-list:hover {
+        .dropdown {
+          display: block;
+        }
+      }
+
+      .dropdown-toggle.true ~ .dropdown-list > .dropdown {
+        display: block;
+      }
+    }
+  }
+}

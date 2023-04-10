@@ -1,0 +1,38 @@
+.shopping-mall .sm-header {
+  padding: 20px 260px;
+  border-bottom: 1px solid #909090;
+}
+.shopping-mall .sm-header .title {
+  font-size: var(--font-18);
+  font-weight: var(--font-semibold);
+}
+.shopping-mall .sm-header .sm-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 20px;
+  font-size: var(--font-14);
+  font-weight: var(--font-regular);
+}
+.shopping-mall .sm-header .sm-nav .dropdown-toggle {
+  margin-right: 30px;
+}
+.shopping-mall .sm-header .sm-nav .dropdown-list {
+  width: 100px;
+}
+.shopping-mall .sm-header .sm-nav .dropdown-list .dropdown {
+  display: none;
+  padding-top: 20px;
+  font-size: var(--font-12);
+}
+.shopping-mall .sm-header .sm-nav .dropdown-list .dropdown li:not(:first-child) {
+  margin-top: 20px;
+}
+.shopping-mall .sm-header .sm-nav .dropdown-list:hover .dropdown {
+  display: block;
+}
+.shopping-mall .sm-header .sm-nav .dropdown-toggle.true ~ .dropdown-list > .dropdown {
+  display: block;
+}
+
+/*# sourceMappingURL=shoppingmall.css.map */
