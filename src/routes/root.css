@@ -1,7 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
-
 :root {
-  // Color Code
   --color-18: #181818;
   --color-36: #363636;
   --color-54: #545454;
@@ -9,16 +7,12 @@
   --color-90: #909090;
   --color-F9: #F9F9F9;
   --color-FF: #FFFFFF;
-
-  // Font Size
   --font-32: 32px;
   --font-28: 28px;
   --font-24: 24px;
   --font-18: 18px;
   --font-14: 14px;
   --font-12: 12px;
-
-  // Font Weight
   --font-bold: 800;
   --font-semibold: 600;
   --font-regular: 400;
@@ -40,3 +34,5 @@
 .bold {
   font-weight: var(--font-bold);
 }
+
+/*# sourceMappingURL=root.css.map */
