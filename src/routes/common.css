@@ -14,73 +14,49 @@ ul, li {
   cursor: pointer;
 }
 
-#navigator {
+header {
+  background-color: var(--color-18);
+  position: sticky;
+  padding: 0 20px;
+  top: 0;
+  z-index: 99;
+}
+header #navigator {
+  margin: auto;
+  max-width: 1200px;
   position: relative;
   width: 100%;
-  background-color: var(--color-18);
-  color: var(--color-FF);
+  color: var(--color-F9);
   transition: all 0.5s;
 }
-#navigator ul {
+header #navigator ul {
   display: flex;
   flex-direction: row;
 }
-#navigator ul li {
-  padding: 20px;
+header #navigator ul li {
+  padding: 20px 0;
   font-size: 14px;
 }
-
-.page-layout {
-  min-height: 100vh;
-}
-.page-layout header {
-  border-bottom: 1px solid var(--color-72);
-}
-.page-layout header p {
-  font-size: var(--font-24);
-  font-weight: var(--font-semibold);
-  padding: 20px;
-}
-.page-layout header ul {
-  display: flex;
-  flex-direction: row;
-}
-.page-layout header ul li {
-  font-size: var(--font-14);
-  color: var(--color-90);
-  padding: 20px;
-}
-.page-layout header ul li[aria-current=page] {
-  font-weight: var(--font-semibold);
-  color: var(--color-18);
-}
-.page-layout nav {
-  border-bottom: 1px solid var(--color-72);
-}
-.page-layout nav ul {
-  display: flex;
-  flex-direction: row;
-}
-.page-layout nav ul li {
-  font-size: var(--font-12);
-  color: var(--color-90);
-  padding: 20px;
-}
-.page-layout nav ul li[aria-current=page] {
-  font-weight: var(--font-semibold);
-  color: var(--color-18);
+header #navigator ul li:not(:first-child) {
+  margin-left: 30px;
 }
 
 footer {
+  margin-top: 20px;
   background-color: var(--color-F9);
   color: var(--color-72);
   font-size: var(--font-12);
 }
-footer p {
-  padding: 10px 20px;
+footer #footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
-footer p a {
+footer #footer p > a {
   color: var(--color-72);
+}
+footer #footer p:not(:first-child) {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=common.css.map */
