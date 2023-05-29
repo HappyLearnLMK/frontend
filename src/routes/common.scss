@@ -3,65 +3,87 @@
   margin: 0;
   font-family: Pretendard, sans-serif;
   font-weight: var(--font-regular);
-  text-transform: capitalize;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-90);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-C9);
 }
 
 ul, li {
   list-style: none;
 }
 
-.link {
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: var(--color-18);
 }
 
-header {
-  background-color: var(--color-18);
-  position: sticky;
-  padding: 0 20px;
-  top: 0;
-  z-index: 99;
+.pointer {
+  cursor: pointer !important;
+}
 
-  #navigator {
-    margin: auto;
-    max-width: 1200px;
+.layout {
+  display: grid;
+  grid-template-columns: 180px auto;
+  transition: all .33s;
+
+  > nav {
+    text-transform: capitalize;
+    min-height: 100vh;
+    background-color: var(--color-FF);
+    border-right: 1px solid var(--color-C9);
+    transition: max-width .33s;
     position: relative;
-    width: 100%;
-    color: var(--color-F9);
-    transition: all .5s;
+    z-index: 99;
 
-    ul {
+    .toggle-btn {
+      display: none;
+      background-color: var(--color-FF);
+      position: absolute;
+      left: 100%;
+      padding: .7em;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-C9);
+      border-top-width: 0;
+      border-left-width: 0;
+    }
+
+    &:hover {
+      .toggle-btn {
+        display: flex;
+      }
+    }
+
+    .menu-list {
+      overflow-x: hidden;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
 
-      li {
-        padding: 20px 0;
-        font-size: 14px;
+      .menu {
+        padding: 1.2em;
+        min-width: 120px;
+        font-size: var(--font-12);
+        font-weight: var(--font-semibold);
+        cursor: pointer;
       }
+    }
+  }
 
-      li:not(:first-child) {
-        margin-left: 30px;
-      }
+  &.toggle {
+    grid-template-columns: 0 auto;
+
+    nav > .toggle-btn > svg {
+      transform: rotateY(180deg);
     }
   }
 }
 
-footer {
-  margin-top: 20px;
-  background-color: var(--color-F9);
-  color: var(--color-72);
-  font-size: var(--font-12);
-
-  #footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-
-    p > a {
-      color: var(--color-72);
-    }
-
-    p:not(:first-child) {
-      margin-top: 20px;
-    }
-  }
-}

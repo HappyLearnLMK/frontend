@@ -52,7 +52,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'pants',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -63,7 +63,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'pants',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -74,7 +74,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'pants',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -85,7 +85,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'pants',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -96,7 +96,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 0,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'pants',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -107,7 +107,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'pants',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -118,7 +118,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'pants',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -129,7 +129,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 0,
         prod_opt: 'outer',
-        prod_cate: 'clothes',
+        prod_cate: 'jewelry',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -140,7 +140,7 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'knit',
-        prod_cate: 'clothes',
+        prod_cate: 'jewelry',
     },
     {
         prod_nm: 'lorem ipsum',
@@ -151,6 +151,6 @@ export const sampleData = [
         prod_price: 1000000,
         prod_dc: 18,
         prod_opt: 'man-to-man',
-        prod_cate: 'clothes',
+        prod_cate: 'jewelry',
     },
 ];

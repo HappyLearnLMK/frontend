@@ -1,0 +1,22 @@
+.signin-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  min-height: 625px;
+}
+.signin-form .signin-container {
+  min-width: 560px;
+  display: flex;
+  flex-direction: row;
+}
+.signin-form .signin-container .form {
+  flex: 1 1 auto;
+  padding: 0.7em 1em;
+}
+.signin-form .signin-container .form:not(:last-child) {
+  border-right: 1px solid #C9C9C9;
+}
+
+/*# sourceMappingURL=signin.css.map */

@@ -1,38 +1,38 @@
 <script>
     import './root.css';
     import './common.css';
-    import { goto } from '$app/navigation';
+    import ArrowLeft from '$lib/images/icon/ArrowLeft.svelte';
 
     const menuList = [
-        { name: 'HappyLearning', url: '/' },
-        { name: 'Shopping-mall', url: '/shoppingmall' },
+        { url: '/', name: 'home' },
+        { url: '/shoppingmall', name: 'shopping mall' },
+        { url: '/admin', name: 'admin' },
     ];
+
+
+    let top = 0;
+    let btnHeight;
+    const navHandler = {
+        toggle() {
+            document.querySelector('.layout').classList.toggle('toggle');
+        },
+    };
 </script>
-
-<!-- Header Section -->
-<header>
-    <div id='navigator'>
-        <ul>
+<div class='layout'>
+    <nav>
+        <div bind:offsetHeight={btnHeight} class='toggle-btn pointer' on:click={navHandler.toggle}
+             style={`--top: ${top-btnHeight/2}px`}>
+            <svelte:component this={ArrowLeft} />
+        </div>
+        <div class='menu-list'>
             {#each menuList as menu}
-                <li class='link' on:click={()=>{ goto(`${menu.url}`); }}>
-                    {menu.name}
-                </li>
+                <a class='menu' href={menu.url}>{menu.name}</a>
             {/each}
-        </ul>
-    </div>
-</header>
-<!-- Body Section -->
-<slot />
+        </div>
+    </nav>
 
-<!-- Footer Section -->
-<footer>
-    <div id='footer'>
-        <p><span class='semibold'>project.</span>&nbsp;happy learning</p>
-        <p><span class='semibold'>member.</span>&nbsp;
-            <a href='https://github.com/culgamyun' target='_blank'>ch.lee</a>&nbsp;┃&nbsp;
-            <a href='https://github.com/culgamyun' target='_blank'>kj.min</a>&nbsp;┃&nbsp;
-            <a href='https://github.com/culgamyun' target='_blank'>yj.kwon</a>
-        </p>
-        <p><span class='semibold'>collaborate kotlin and svelte</span></p>
-    </div>
-</footer>
+    <!-- Body Section -->
+    <main>
+        <slot />
+    </main>
+</div>

@@ -1,0 +1,29 @@
+.admin {
+  display: grid;
+  grid-template-columns: 180px auto;
+
+  nav {
+    min-height: 100vh;
+    border-right: 1px solid var(--color-C9);
+    z-index: 90;
+    position: relative;
+
+    #logout {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: .7em;
+      background-color: var(--color-main);
+      border: none;
+      outline: none;
+      color: var(--color-F9);
+      font-size: var(--font-12);
+      font-weight: var(--font-semibold);
+    }
+  }
+
+  .register-form {
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+}
