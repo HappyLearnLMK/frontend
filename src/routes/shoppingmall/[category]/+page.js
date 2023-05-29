@@ -1,14 +1,15 @@
 import { sampleData } from '$lib/js/sampleData.js';
-import { isNull } from '$lib/js/isNull.js';
 
 export const load = ({ url, params }) => {
     console.log('LOAD !!');
 
     const param = params.category;
+    const filter_1 = sampleData.filter((state) => state.prod_cate === param);
+
     const searchParam = url.searchParams.get('opt');
-    const cateData = !isNull(searchParam)
-        ? sampleData.filter((state) => state.prod_opt === searchParam)
-        : sampleData;
+    const cateData = searchParam
+        ? filter_1.filter((state) => state.prod_opt === searchParam)
+        : filter_1;
 
     console.log('param', param);
     console.log('searchParam', searchParam);

@@ -3,60 +3,79 @@
   margin: 0;
   font-family: Pretendard, sans-serif;
   font-weight: var(--font-regular);
-  text-transform: capitalize;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-90);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-C9);
 }
 
 ul, li {
   list-style: none;
 }
 
-.link {
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: var(--color-18);
 }
 
-header {
-  background-color: var(--color-18);
-  position: sticky;
-  padding: 0 20px;
-  top: 0;
+.pointer {
+  cursor: pointer !important;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px auto;
+  transition: all 0.33s;
+}
+.layout > nav {
+  text-transform: capitalize;
+  min-height: 100vh;
+  background-color: var(--color-FF);
+  border-right: 1px solid var(--color-C9);
+  transition: max-width 0.33s;
+  position: relative;
   z-index: 99;
 }
-header #navigator {
-  margin: auto;
-  max-width: 1200px;
-  position: relative;
-  width: 100%;
-  color: var(--color-F9);
-  transition: all 0.5s;
+.layout > nav .toggle-btn {
+  display: none;
+  background-color: var(--color-FF);
+  position: absolute;
+  left: 100%;
+  padding: 0.7em;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-C9);
+  border-top-width: 0;
+  border-left-width: 0;
 }
-header #navigator ul {
+.layout > nav:hover .toggle-btn {
   display: flex;
-  flex-direction: row;
 }
-header #navigator ul li {
-  padding: 20px 0;
-  font-size: 14px;
+.layout > nav .menu-list {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
-header #navigator ul li:not(:first-child) {
-  margin-left: 30px;
-}
-
-footer {
-  margin-top: 20px;
-  background-color: var(--color-F9);
-  color: var(--color-72);
+.layout > nav .menu-list .menu {
+  padding: 1.2em;
+  min-width: 120px;
   font-size: var(--font-12);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
 }
-footer #footer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.layout.toggle {
+  grid-template-columns: 0 auto;
 }
-footer #footer p > a {
-  color: var(--color-72);
-}
-footer #footer p:not(:first-child) {
-  margin-top: 20px;
+.layout.toggle nav > .toggle-btn > svg {
+  transform: rotateY(180deg);
 }
 
 /*# sourceMappingURL=common.css.map */

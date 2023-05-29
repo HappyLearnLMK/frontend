@@ -1,7 +1,7 @@
 <script>
     import './category.css';
     import { goto } from '$app/navigation';
-    import ProductCard from '../../../components/ProductCard/ProductCard.svelte';
+    import ProductCard from '../../../components/Card/Product/ProductCard.svelte';
 
     const prefix = '/shoppingmall';
     let width;
@@ -39,22 +39,13 @@
                     {searchParam ? searchParam : 'all'}
                 </li>
             </ul>
-
-            {#if width < 800}
-                <select class='sort-order'>
-                    <option value='opt1'>최근 등록순</option>
-                    <option value='opt2'>상품명순(ㄱ-ㅎ)</option>
-                    <option value='opt3'>높은 가격순</option>
-                    <option value='opt4'>낮은 가격순</option>
-                </select>
-            {:else}
-                <ul class='sort-order'>
-                    <li class='link'>최근 등록순</li>
-                    <li class='link'>상품명순(ㄱ-ㅎ)</li>
-                    <li class='link'>높은 가격순</li>
-                    <li class='link'>낮은 가격순</li>
-                </ul>
-            {/if}
+            
+            <ul class='sort-order'>
+                <li class='pointer'>최근 등록순</li>
+                <li class='pointer'>상품명순(ㄱ-ㅎ)</li>
+                <li class='pointer'>높은 가격순</li>
+                <li class='pointer'>낮은 가격순</li>
+            </ul>
         </div>
     </div>
 

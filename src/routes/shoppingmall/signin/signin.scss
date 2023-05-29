@@ -1,0 +1,23 @@
+.signin-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  min-height: 625px;
+
+  .signin-container {
+    min-width: 560px;
+    display: flex;
+    flex-direction: row;
+
+    .form {
+      flex: 1 1 auto;
+      padding: .7em 1em;
+
+      &:not(:last-child) {
+        border-right: 1px solid #C9C9C9;
+      }
+    }
+  }
+}
