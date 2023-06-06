@@ -3,6 +3,7 @@
 
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
+    import Logout from '$lib/images/icon/Logout.svelte';
 
     onMount(() => {
         let session = sessionStorage.getItem('login');
