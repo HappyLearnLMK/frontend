@@ -26,7 +26,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        font-size: var(--font-12);
+        font-size: var(--font-10);
+        text-transform: uppercase;
 
         li:first-child::before {
           content: '🏠';
@@ -53,7 +54,7 @@
         align-items: center;
 
         li {
-          font-size: var(--font-12);
+          font-size: var(--font-10);
           font-weight: var(--font-semibold);
         }
 
@@ -66,20 +67,19 @@
   }
 
   .category-section {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 20px;
 
     .card-info {
-      padding: 20px 0;
+      padding: 20px;
       font-size: var(--font-12);
       color: var(--color-C9);
     }
 
     .cards {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+      gap: .72em;
     }
 
     .btn {

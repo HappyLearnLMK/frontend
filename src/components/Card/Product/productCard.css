@@ -1,6 +1,6 @@
 .product-card {
-  flex-basis: 25%;
   position: relative;
+  border: 1px solid var(--color-C9);
 }
 .product-card .product-card-box {
   padding: 20px;
@@ -91,9 +91,6 @@
 }
 .product-card .product-card-box div[name=product-price-box] .info-box:hover > .product-price-detail {
   display: block;
-}
-.product-card .product-card-box:hover {
-  box-shadow: 2px 2px 5px 2px var(--color-E9);
 }
 
 @media (max-width: 1000px) {
