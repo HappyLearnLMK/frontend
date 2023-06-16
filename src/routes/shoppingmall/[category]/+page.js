@@ -1,25 +1,31 @@
-import { sampleData } from '$lib/js/sampleData.js';
-
-export const load = ({ url, params }) => {
+export const load = async ({ fetch, url, params }) => {
     console.log('LOAD !!');
-
+    
     const param = params.category;
-    const filter_1 = sampleData.filter((state) => state.prod_cate === param);
-
-    const searchParam = url.searchParams.get('opt');
-    const cateData = searchParam
-        ? filter_1.filter((state) => state.prod_opt === searchParam)
-        : filter_1;
-
-    console.log('param', param);
-    console.log('searchParam', searchParam);
-    console.log('cateData', cateData);
-
+    
+    const fetchData = async () => {
+        const cate = await fetch('http://localhost:8080/product/category', {
+            method: 'POST',
+            body: JSON.stringify({
+                mainCategory: 'cloths',
+                middleCategory: 'outer',
+                page: 0,
+                size: 8,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        
+        const data = await cate.json();
+        
+        return data.data.content;
+    };
+    
     return {
         param: param,
-        searchParam: searchParam,
-        cateData: [...cateData],
         pageIndex: 0,
+        category: fetchData(),
     };
 };
 

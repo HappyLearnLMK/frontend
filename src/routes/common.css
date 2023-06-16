@@ -26,23 +26,25 @@ a {
   color: var(--color-18);
 }
 
+summary::marker {
+  content: "";
+}
+
 .pointer {
   cursor: pointer !important;
 }
 
 .layout {
   display: grid;
-  grid-template-columns: 180px auto;
-  transition: all 0.33s;
+  grid-template-columns: max-content auto;
 }
 .layout > nav {
   text-transform: capitalize;
   min-height: 100vh;
   background-color: var(--color-FF);
   border-right: 1px solid var(--color-C9);
-  transition: max-width 0.33s;
   position: relative;
-  z-index: 99;
+  z-index: 999;
 }
 .layout > nav .toggle-btn {
   display: none;
@@ -59,17 +61,47 @@ a {
 .layout > nav:hover .toggle-btn {
   display: flex;
 }
-.layout > nav .menu-list {
-  overflow-x: hidden;
+.layout > nav .menu-wrap {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
-.layout > nav .menu-list .menu {
+.layout > nav .menu-wrap .menu {
   padding: 1.2em;
-  min-width: 120px;
+  min-width: 180px;
   font-size: var(--font-12);
   font-weight: var(--font-semibold);
   cursor: pointer;
+  border-bottom: 1px solid var(--color-C9);
+}
+.layout > nav .menu-wrap .menu.list p {
+  display: flex;
+  justify-content: space-between;
+}
+.layout > nav .menu-wrap .menu.list p::after {
+  content: "+";
+}
+.layout > nav .menu-wrap .menu ul {
+  max-height: max-content;
+  overflow-y: hidden;
+}
+.layout > nav .menu-wrap .menu ul li {
+  font-size: var(--font-10);
+  font-weight: var(--font-thin);
+  color: var(--color-90);
+  padding-top: 1.2em;
+}
+.layout > nav .menu-wrap .menu ul li:hover {
+  color: var(--color-main);
+}
+.layout > nav .menu-wrap .menu ul li::before {
+  content: var(--text);
+}
+.layout > nav .menu-wrap .menu.hide p::after {
+  content: "-";
+}
+.layout > nav .menu-wrap .menu.hide ul {
+  max-height: 0;
 }
 .layout.toggle {
   grid-template-columns: 0 auto;

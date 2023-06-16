@@ -1,22 +1,17 @@
 <script>
     import './category.css';
     import { goto } from '$app/navigation';
-    import ProductCard from '../../../components/Card/Product/ProductCard.svelte';
-
+    
     const prefix = '/shoppingmall';
     let width;
-
     export let data;
-
-    let param, searchParam, cateData, pageIndex, viewData;
-
+    console.log('page data', data);
+    let param, pageIndex, viewData, category;
+    
     $: param = data.param;
-    $: searchParam = data.searchParam;
-    $: cateData = data.cateData;
-
+    
     /* Product Section */
     $: pageIndex = data.pageIndex;
-    $: viewData = [...cateData.slice(0, 8)];
 </script>
 
 <div bind:clientWidth={width} class='category-page'>
@@ -35,9 +30,6 @@
                     home
                 </li>
                 <li>{param}</li>
-                <li>
-                    {searchParam ? searchParam : 'all'}
-                </li>
             </ul>
             
             <ul class='sort-order'>
@@ -48,29 +40,29 @@
             </ul>
         </div>
     </div>
-
-    <div class='category-section'>
-        <p class='card-info'>등록된 상품 전체 {cateData.length}개 중 {viewData.length}개</p>
-
-        <div class='cards'>
-            {#if viewData.length > 0}
-                {#each viewData as data}
-                    <ProductCard cardData={JSON.stringify(data)} />
-                {/each}
-            {/if}
-        </div>
-
-        {#if cateData.length !== viewData.length}
-            <div
-                class='btn link'
-                on:click={()=>{
-                    ++pageIndex;
-                    $: viewData = [...viewData, ...cateData.slice(pageIndex * 8, (pageIndex + 1) * 8)]
-                }}
-            >
-                more view +
-            </div>
-        {/if}
-    </div>
+    
+    <!--    <div class='category-section'>-->
+    <!--        <p class='card-info'>등록된 상품 전체 {cateData.length}개 중 {viewData.length}개</p>-->
+    <!--        -->
+    <!--        <div class='cards'>-->
+    <!--            {#if category.length > 0}-->
+    <!--                {#each category as data}-->
+    <!--                    <ProductCard cardData={JSON.stringify(data)} />-->
+    <!--                {/each}-->
+    <!--            {/if}-->
+    <!--        </div>-->
+    <!--        -->
+    <!--        {#if cateData.length !== viewData.length}-->
+    <!--            <div-->
+    <!--                class='btn link'-->
+    <!--                on:click={()=>{-->
+    <!--                    ++pageIndex;-->
+    <!--                    $: viewData = [...viewData, ...cateData.slice(pageIndex * 8, (pageIndex + 1) * 8)]-->
+    <!--                }}-->
+    <!--            >-->
+    <!--                more view +-->
+    <!--            </div>-->
+    <!--        {/if}-->
+    <!--    </div>-->
 </div>
 

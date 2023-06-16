@@ -1,32 +1,44 @@
 .shoppingmall {
+  max-width: 1440px;
+  margin-inline: auto;
+
   header {
     position: sticky;
+    z-index: 99;
 
     .toolbar {
-      max-width: 1280px;
-      margin-inline: auto;
+      position: relative;
 
       .toolbar-container {
         display: grid;
-        grid-template-columns: repeat(2, 46px);
+        grid-template-columns: repeat(3, max-content);
         position: relative;
         border-left: 1px solid var(--color-C9);
         border-right: 1px solid var(--color-C9);
 
-        button {
-          padding: .7em 1.2em;
+        a {
+          padding: .72em 1.08em;
           background-color: transparent;
           border: none;
           outline: none;
           border-right: 1px solid var(--color-C9);
         }
       }
+
+      .menu-detail {
+        width: -webkit-fill-available;
+        position: absolute;
+        min-height: 560px;
+        border: 1px solid var(--color-C9);
+        background-color: var(--color-FF);
+
+        &.false {
+          display: none;
+        }
+      }
     }
 
     .menu-list {
-      max-width: 1280px;
-      margin-inline: auto;
-
       .menu-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, auto));
@@ -43,6 +55,43 @@
           text-align: center;
         }
       }
+    }
+  }
+
+  footer {
+    min-height: 240px;
+    border: 1px solid var(--color-C9);
+    border-top-width: 0;
+
+    .policy-wrap {
+      padding: .72em 1.22em;
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--color-C9);
+
+      a {
+        padding: .36em 1.22em;
+        font-size: var(--font-10);
+        color: var(--color-90);
+        text-align: center;
+
+        &:not(:last-child) {
+          border-right: 1px solid var(--color-C9);
+        }
+      }
+    }
+
+    .footer-content {
+      min-height: 120px;
+      padding: 1.22em;
+    }
+
+    .footer-toolbar {
+      border-top: 1px solid var(--color-C9);
+      padding: 1.22em;
+      display: grid;
+      align-items: center;
     }
   }
 }

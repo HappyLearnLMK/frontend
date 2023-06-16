@@ -3,5 +3,5 @@
 </script>
 
 <section>
-    hmm..
+
 </section>
