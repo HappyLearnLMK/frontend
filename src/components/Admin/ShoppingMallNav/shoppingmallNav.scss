@@ -1,0 +1,38 @@
+.shoppingmall-nav {
+  position: sticky;
+  top: 0;
+  border: 1px solid var(--color-C9);
+  border-top-width: 0;
+  border-bottom-width: 0;
+  min-height: 100vh;
+
+  .nav-wrap {
+    max-height: 100vh;
+    overflow-y: auto;
+
+    .nav-item {
+      padding: 1.2em;
+      min-width: 180px;
+      border-bottom: 1px solid var(--color-C9);
+
+      > p {
+        font-size: var(--font-12);
+        font-weight: var(--font-regular);
+      }
+
+      > .nav-list {
+        font-size: var(--font-10);
+        color: var(--color-90);
+
+        li {
+          padding-top: 1.2em;
+          font-weight: var(--font-thin);
+
+          &:hover {
+            color: var(--color-main);
+          }
+        }
+      }
+    }
+  }
+}

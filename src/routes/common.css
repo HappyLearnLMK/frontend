@@ -39,11 +39,12 @@ summary::marker {
   grid-template-columns: max-content auto;
 }
 .layout > nav {
-  text-transform: capitalize;
   min-height: 100vh;
+  text-transform: capitalize;
   background-color: var(--color-FF);
   border-right: 1px solid var(--color-C9);
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 999;
 }
 .layout > nav .toggle-btn {
@@ -65,6 +66,8 @@ summary::marker {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .layout > nav .menu-wrap .menu {
   padding: 1.2em;

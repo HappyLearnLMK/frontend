@@ -1,6 +1,8 @@
-.admin-shoppingmall-layout {
+.admin-layout {
   max-width: 1440px;
   margin-inline: auto;
+  display: grid;
+  grid-template-columns: max-content auto;
 }
 
 /*# sourceMappingURL=adminShoppingmall.css.map */

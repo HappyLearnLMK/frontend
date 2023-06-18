@@ -1,83 +1,97 @@
 .shoppingmall {
-  max-width: 1440px;
-  margin-inline: auto;
-}
-.shoppingmall header {
-  position: sticky;
-  z-index: 99;
-}
-.shoppingmall header .toolbar {
-  position: relative;
-}
-.shoppingmall header .toolbar .toolbar-container {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  position: relative;
-  border-left: 1px solid var(--color-C9);
-  border-right: 1px solid var(--color-C9);
-}
-.shoppingmall header .toolbar .toolbar-container a {
-  padding: 0.72em 1.08em;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  border-right: 1px solid var(--color-C9);
-}
-.shoppingmall header .toolbar .menu-detail {
-  width: -webkit-fill-available;
-  position: absolute;
-  min-height: 560px;
-  border: 1px solid var(--color-C9);
-  background-color: var(--color-FF);
-}
-.shoppingmall header .toolbar .menu-detail.false {
-  display: none;
-}
-.shoppingmall header .menu-list .menu-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, auto));
-  border-top: 1px solid var(--color-C9);
-  border-left: 1px solid var(--color-C9);
-}
-.shoppingmall header .menu-list .menu-container .menu {
-  padding: 1.2em;
-  border-right: 1px solid var(--color-C9);
-  border-bottom: 1px solid var(--color-C9);
-  font-size: var(--font-10);
-  font-weight: var(--font-semibold);
-  text-transform: uppercase;
-  text-align: center;
-}
-.shoppingmall footer {
-  min-height: 240px;
-  border: 1px solid var(--color-C9);
-  border-top-width: 0;
-}
-.shoppingmall footer .policy-wrap {
-  padding: 0.72em 1.22em;
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--color-C9);
-}
-.shoppingmall footer .policy-wrap a {
-  padding: 0.36em 1.22em;
-  font-size: var(--font-10);
-  color: var(--color-90);
-  text-align: center;
-}
-.shoppingmall footer .policy-wrap a:not(:last-child) {
-  border-right: 1px solid var(--color-C9);
-}
-.shoppingmall footer .footer-content {
-  min-height: 120px;
-  padding: 1.22em;
-}
-.shoppingmall footer .footer-toolbar {
-  border-top: 1px solid var(--color-C9);
-  padding: 1.22em;
-  display: grid;
-  align-items: center;
+    max-width: 1440px;
+    margin-inline: auto;
 }
 
-/*# sourceMappingURL=shoppingmall.css.map */
+.shoppingmall header {
+    position: sticky;
+    z-index: 99;
+}
+
+.shoppingmall header .toolbar {
+    position: relative;
+}
+
+.shoppingmall header .toolbar .toolbar-container {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    position: relative;
+    border-left: 1px solid var(--color-C9);
+    border-right: 1px solid var(--color-C9);
+}
+
+.shoppingmall header .toolbar .toolbar-container a {
+    padding: 0.72em 1.08em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-right: 1px solid var(--color-C9);
+}
+
+.shoppingmall header .toolbar .menu-detail {
+    width: -webkit-fill-available;
+    position: absolute;
+    min-height: 560px;
+    border: 1px solid var(--color-C9);
+    background-color: var(--color-FF);
+}
+
+.shoppingmall header .toolbar .menu-detail.false {
+    display: none;
+}
+
+.shoppingmall header .menu-list .menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    border-top: 1px solid var(--color-C9);
+    border-left: 1px solid var(--color-C9);
+}
+
+.shoppingmall header .menu-list .menu-container .menu {
+    padding: 1.2em;
+    border-right: 1px solid var(--color-C9);
+    border-bottom: 1px solid var(--color-C9);
+    font-size: var(--font-10);
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.shoppingmall footer {
+    min-height: 240px;
+    border: 1px solid var(--color-C9);
+    border-top-width: 0;
+}
+
+.shoppingmall footer .policy-wrap {
+    padding: 0.72em 1.22em;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-C9);
+}
+
+.shoppingmall footer .policy-wrap a {
+    padding: 0.36em 1.22em;
+    font-size: var(--font-10);
+    color: var(--color-90);
+    text-align: center;
+}
+
+.shoppingmall footer .policy-wrap a:not(:last-child) {
+    border-right: 1px solid var(--color-C9);
+}
+
+.shoppingmall footer .footer-content {
+    min-height: 120px;
+    padding: 1.22em;
+}
+
+.shoppingmall footer .footer-toolbar {
+    border-top: 1px solid var(--color-C9);
+    padding: 1.22em;
+    display: grid;
+    align-items: center;
+}
+
+/*# sourceMappingURL=[page].css.map */
