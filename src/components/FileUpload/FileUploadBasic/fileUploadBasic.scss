@@ -1,0 +1,49 @@
+.file-upload-basic {
+  display: grid;
+  padding: 12px;
+  max-width: 420px;
+  gap: 12px;
+
+  div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 6px;
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    input[type='text'] {
+      padding: 12px 8px;
+      border-radius: 5px;
+      border: 1px solid var(--color-C9);
+    }
+
+    label {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      background-color: var(--color-90);
+      color: var(--color-FF);
+      font-size: var(--font-13);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type='file'] {
+      display: none;
+    }
+  }
+
+  button[type='submit'] {
+    background-color: var(--color-blue);
+    padding: 12px 8px;
+    text-align: center;
+    font-size: var(--font-16);
+    color: var(--color-FF);
+    border-radius: 5px;
+  }
+}

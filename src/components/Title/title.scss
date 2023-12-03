@@ -1,0 +1,16 @@
+.component-title {
+  padding: 12px;
+  max-width: 420px;
+
+  .title {
+    font-weight: var(--font-bold);
+    font-size: var(--font-24);
+  }
+
+  .summary {
+    margin-top: 12px;
+    font-size: var(--font-13);
+    font-weight: var(--font-regular);
+    color: var(--color-90);
+  }
+}

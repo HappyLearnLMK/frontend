@@ -1,0 +1,55 @@
+.login-basic {
+  padding: 12px;
+  max-width: 420px;
+  display: grid;
+  gap: 32px;
+
+  div.login-input-form {
+    position: relative;
+
+    input {
+      width: 100%;
+      position: relative;
+      padding: 12px 8px;
+      box-sizing: border-box;
+      border: 1px solid var(--color-E9);
+      border-radius: 5px;
+      outline: none;
+
+      &:focus, &:valid {
+        border-color: var(--color-blue);
+      }
+    }
+
+    input:focus + label,
+    input:valid + label {
+      color: var(--color-blue);
+      bottom: 100%;
+      background-color: var(--color-FF);
+    }
+
+    label {
+      position: absolute;
+      bottom: 50%;
+      left: 4px;
+      padding: 0 4px;
+      transition: bottom .25s;
+      transform: translateY(50%);
+      text-transform: uppercase;
+      color: var(--color-C9);
+      font-size: var(--font-10);
+      font-weight: var(--font-regular);
+    }
+  }
+
+
+  button[type='submit'] {
+    background-color: var(--color-blue);
+    padding: 12px 4px;
+    border-radius: 5px;
+    color: var(--color-FF);
+    font-size: var(--font-16);
+    font-weight: var(--font-semibold);
+    text-align: center;
+  }
+}

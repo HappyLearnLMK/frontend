@@ -1,0 +1,9 @@
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "nav section"
+    "nav footer";
+  grid-template-columns: 240px auto;
+  grid-template-rows: auto 120px;
+}
